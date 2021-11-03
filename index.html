@@ -27,7 +27,7 @@
 <div class="hero">
 <div class="content">
     <h1>aspiring 
-        web developer 
+         developer 
         under constructions</h1>
         <div class="meet">
         <span>Meet me 👩‍💻 </span>
@@ -38,7 +38,7 @@
                 <rect width="51" height="91" rx="25.5" stroke="none"/>
                 <rect x="2.5" y="2.5" width="46" height="86" rx="23" fill="none"/>
               </g>
-              <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="16.5" cy="17.5" rx="16.5" ry="17.5" transform="translate(463 598)" fill="#fa23b1"/>
+              <ellipse class="circle" id="Ellipse_1" data-name="Ellipse 1" cx="16.5" cy="17.5" rx="16.5" ry="17.5" transform="translate(463 598)" fill="#fa23b1"/>
             </g>
           </svg> 
 </div>
@@ -60,7 +60,7 @@
 <div class="left">
     <div  class="inner-transition2">
         <p class="subtitle">About me</p>
-        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae adipisci ea ipsa incidunt maiores dolorem non repellendus beatae, explicabo dolore cupiditate id, magnam delectus laborum maxime quas, corporis unde.</p>
+        <p class="desc">Graduated in Information Technology for the year 2021, interested in programming, development and design. I aspire to gain more knowledge and keep up with everything new.</p>
     </div>
 </div>
 <img class="right-transition2" src="images/telegram-cloud-photo-size-4-5920379630764799960-x.svg" alt="emoji">
@@ -74,7 +74,7 @@
                     <img src="images/icon1.svg" alt="icon">
                 </div>
                 <p class="skill-title">Web & Application development</p>
-                <p class="skill-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa placeat facilis saepe. Quis, optio qui repellat libero cum sunt, nulla incidunt rem obcaecati fugiat suscipit ipsum, autem quisquam repellendus nihil?</p>
+                <p class="skill-desc">I have good experience with FrontEnd development, and little experience with Laravel framework for Backand, and also knowledge of Flutter framework for apps.</p>
             </li>
 
             <li class="transition2">
@@ -82,7 +82,7 @@
                     <img src="images/Image 1.svg" alt="icon">
                 </div>
                 <p class="skill-title">Programming Languags </p>
-                <p class="skill-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa placeat facilis saepe. Quis, optio qui repellat libero cum sunt, nulla incidunt rem obcaecati fugiat suscipit ipsum, autem quisquam repellendus nihil?</p>
+                <p class="skill-desc">Java </br> Python </br> PHP </br> JavaScripts </br>MySQL</p>
            
             </li> 
             
@@ -91,7 +91,7 @@
                     <img src="images/Image 2.svg" alt="icon">
                 </div>
                 <p class="skill-title">Other skills</p>
-                <p class="skill-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa placeat facilis saepe. Quis, optio qui repellat libero cum sunt, nulla incidunt rem obcaecati fugiat suscipit ipsum, autem quisquam repellendus nihil?</p>
+                <p class="skill-desc">Graphic design </br> Networks </br> Hardware and software troubleshooting </br> Microsoft office </br></p>
           
             </li>
 
@@ -104,7 +104,7 @@
         <div class="inner-transitions">
             <p class="subtitle">Flutter App</p>
             <p class="featured-title">BMI</p>
-            <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores recusandae adipisci ea ipsa incidunt maiores dolorem non repellendus beatae, explicabo dolore cupiditate id, magnam delectus laborum maxime quas, corporis unde.</p>
+            <p class="desc">This is a simple app that lets you calculate your BMI، and healthiness is determined based on the result.</p>
         </div>
     </div>
     <img class="right-transition3" src="images/Simulator Screen Shot - iPhone 8 - 2021-11-03 at 18.36.22.png" >
@@ -134,6 +134,58 @@
     </ul>
     
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    var tl = gsap.timeline();
+
+    tl.from('.content', {
+        y: '-30%',
+        opacity: 0,
+        duration: 2,
+        ease: Power4.easeOut
+    })
+    tl.from('.stagger1', {
+        opacity: 0,
+        y: -50,
+        stagger: .3,
+        ease: Power4.easeOut,
+        duration: 2
+    }, "-=1.5")
+    tl.from('.hero-design', {
+        opacity: 0, y: 50, ease: Power4.easeOut, duration: 1
+    }, "-=2")
+
+    gsap.from(".square-anim", {
+        stagger: .2,
+        scale: 0.1,
+        duration: 1,
+        ease: Back.easeOut.config(1.7)
+    })
+
+    gsap.from(".transition2", {
+        scrollTrigger: {
+            trigger: '.transition2',
+            start: "top bottom"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        stagger: .3
+    })
+
+    gsap.from(".transition3", {
+        scrollTrigger: {
+            trigger: ".transition3",
+            start: "top center"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        stagger: .6
+    });
+</script>
 </body>
 </html>

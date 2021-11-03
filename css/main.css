@@ -439,4 +439,34 @@ section {
     padding: 9em 20em 6em 20em;
   }
 }
+
+.circle {
+  animation: circleAnime 1s infinite alternate-reverse;
+}
+
+@-webkit-keyframes circleAnime {
+  from {
+    -webkit-transform: translate(463px, 598px);
+            transform: translate(463px, 598px);
+    z-index: 5;
+  }
+  to {
+    -webkit-transform: translate(463px, 630px);
+            transform: translate(463px, 630px);
+    z-index: 5;
+  }
+}
+
+@keyframes circleAnime {
+  from {
+    -webkit-transform: translate(463px, 598px);
+            transform: translate(463px, 598px);
+    z-index: 5;
+  }
+  to {
+    -webkit-transform: translate(463px, 630px);
+            transform: translate(463px, 630px);
+    z-index: 5;
+  }
+}
 /*# sourceMappingURL=main.css.map */
