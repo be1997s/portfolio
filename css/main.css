@@ -109,17 +109,6 @@ section {
   z-index: -1;
 }
 
-.about::after {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: #38D685;
-  bottom: 0;
-  z-index: -1;
-}
-
 .subtitle {
   text-transform: uppercase;
   font-weight: bold;
